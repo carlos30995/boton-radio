@@ -1,0 +1,68 @@
+
+body {
+    min-height: 100vh;
+    background-image: repeating-linear-gradient(
+     -45deg,
+     #ffffff 0px,
+     #ffffff 20px,
+     #e49191 20px,
+     #e49191 40px) ;
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.container .radiox{
+
+    border-radius: 50%;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: hsl(180, 100%, 50%,0.68);
+}
+.radiox button{
+    border-radius: 100%;
+    border-color: rgb(0, 156, 156, 1);
+    padding: 20px;
+    background-color: hsl(180, 100%, 50%);
+    align-items: center;
+    cursor:pointer;
+}
+
+@keyframes radiomax{
+    0%{
+        width: 20px;
+        height: 20px;
+    }
+    25% {
+        width: 100px;
+        height: 100px;
+    }
+    50% {
+        width: 200px;
+        height: 200px;
+    }
+    75% {
+        width: 300px;
+        height: 300px;
+    }
+    100% {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+.radiox:has(.estilo:hover){
+    
+    animation-name: radiomax;
+    animation-duration: 400ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
